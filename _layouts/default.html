@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/307infusionpharmacy/307infusionpharmacy.github.io/main/images/307ip_favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Rubik&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+
+          <div class="site-info">
+            <!--<h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>-->
+            <!--<p class="site-description">{{ site.description }}</p>-->
+          </div>
+
+          <nav>
+            <!--<a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/contact">Contact</a>
+            <a href="{{ site.baseurl }}/insurance">Insurance</a>
+            <a href="{{ site.baseurl }}/services">Services</a>-->
+            <a class="page-link {% if page.url == '/about/' %} current {% endif %}" href="{{ site.baseurl }}/about/">About</a>
+            <a class="page-link {% if page.url == '/contact/' %} current {% endif %}" href="{{ site.baseurl }}/contact/">Contact</a>
+            <a class="page-link {% if page.url == '/insurance/' %} current {% endif %}" href="{{ site.baseurl }}/insurance/">Insurance</a>
+            <a class="page-link {% if page.url == '/services/' %} current {% endif %}" href="{{ site.baseurl }}/services/">Services</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <div class="footer_contents">
+            {% include svg-icons.html %}
+          </div>
+          <div class="footer-copyright">
+            <p>Copyright &copy; <script src="{{ site.baseurl }}/assets/js/date.js" ></script> | {{ site.name }} | All Rights Reserved</p> 
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>

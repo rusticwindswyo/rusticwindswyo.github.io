@@ -1,0 +1,495 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+  position: relative;
+  min-height: 100px;
+}
+
+body {
+  background: #fff;
+  font: 18px/1.4 Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0 auto 50px;
+}
+
+.container {
+  margin: 1em auto;
+  max-width: 48em;
+  padding: 0 10px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Rubik, LexendDeca, "Helvetica Neue", Helvetica, Arial, Poppins, sans-serif;
+  color: #222;
+  font-weight: bold;
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+}
+
+@media screen and (max-width: 640px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+}
+h1 {
+  font-family: Rubik;
+  font-size: 30px;
+}
+
+h1 a {
+  color: inherit;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: #666;
+}
+
+p {
+  font-family: Rubik;
+  margin: 15px 0;
+}
+
+a {
+  color: #002868;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  color: #BF0A30;
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: italic;
+  color: #666;
+}
+
+::-moz-selection {
+  color: #000;
+  background: #eee;
+}
+
+::selection {
+  color: #000;
+  background: #FFFFFF;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+.wrapper-masthead {
+  /* background-color: #bf0a30; */
+  /* border-bottom: 4px solid #bf0a30; */
+  /* width: 50%; */
+  vertical-align: middle;
+  margin-bottom: 3em;
+}
+
+.masthead {
+  padding: 1em;
+  /* background-color: #bf0a30; */
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .masthead {
+    /*padding: 5px 0;*/
+    /* background-color: #bf0a30; */
+    text-align: center;
+  }
+}
+header.masthead.clearfix {
+  padding-right: 5px;
+  padding-left: 5px;
+  /* border-right: 40px #bf0a30; */
+  /* border-left: 40px #bf0a30; */
+  border-bottom: 1px #bf0a30;
+  border-style: solid;
+  /* background: #bf0a30; */
+}
+
+@media screen and (max-width: 640px) {
+  .masthead {
+    text-align: center;
+  }
+}
+.site-avatar {
+  margin: .5em;
+  vertical-align: middle;
+  width: 15em;
+}
+
+@media screen and (max-width: 640px) {
+  .site-avatar {
+    float: none;
+    vertical-align: middle;
+    display: block;
+    margin: auto;
+  }
+}
+.site-avatar img {
+  margin: .5em;
+  vertical-align: middle;
+  width: 15em;
+}
+
+.site-info {
+  float: left;
+}
+
+@media screen and (max-width: 640px) {
+  .site-info {
+    float: none;
+    display: block;
+    margin: auto -5em;
+  }
+}
+.site-name {
+  margin: auto 12em;
+  color: #333;
+  cursor: pointer;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.site-description {
+  margin: auto 11.2em 1em;
+  font-family: Poppins;
+  color: #666;
+  font-size: 1em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .site-name {
+    margin: auto;
+    color: #333;
+    cursor: pointer;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .site-description {
+    padding-left: .2em;
+    margin: 1em 1em;
+  }
+}
+nav {
+  /* background-color: #002868; */
+  /* -webkit-border-radius: 15px 15px 0px 0px; */
+  margin-top: 1em;
+  font-family: Poppins;
+  font-size: 1.3em;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: -1.5em;
+}
+
+@media screen and (max-width: 640px) {
+  nav {
+    float: right;
+    /* display: block; */
+    /* margin-top: 1em; */
+    font-size: 1.47em;
+    /* vertical-align: middle; */
+  }
+}
+nav a.selected, nav a:hover {
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  /* -webkit-border-radius: 15px 15px 0px 0px; */
+  /* border-radius: 15px 15px 15px 15px; */
+  background-color: #eaeaea;
+  color: #bf0a30;
+}
+
+nav a:active {
+  background-color: #eee;
+  color: lightGray;
+}
+
+nav a {
+  background-color: #ffffff;
+  /* border-radius: 20px 20px 0px 0px; */
+  display: inline-block;
+  width: 180px;
+  height: 35px;
+  color: #002868;
+  font-weight: 400;
+  margin: -.2em;
+  letter-spacing: .02em;
+}
+
+@media screen and (max-width: 640px) {
+  nav a {
+    /* margin: 0 10px; */
+    /* color: #FFFFFF; */
+  }
+}
+
+.current {
+  background-color: #eaeaea;
+  color: #bf0a30;
+}
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 0.1em solid #FFFFFF;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid #666;
+  padding: 0.1em 1em;
+  color: #666;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.post .comments {
+  margin-top: 10px;
+}
+
+.post .read-more {
+  color: #BF0A30;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.post .read-more:hover {
+  color: #002868;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  float: right;
+  text-align: right;
+}
+
+.wrapper-footer {
+  min-height: 100%;
+  margin: auto auto 60px;
+  padding-top: 5px;
+}
+
+.footer {
+  background-color: #bf0a30;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  background-attachment: scroll;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3.8em;
+  /* Height of the footer */
+  position: fixed;
+  box-shadow: 2px 6px 2px 6px rgba(10, 10, 10, 0.12), inset 0 3px 0 #002868;
+}
+
+@media screen and (max-width: 640px) {
+  .footer {
+    height: 0.2 0.8em;
+    height: 70px;
+    padding-bottom: 2px;
+  }
+}
+.footer_contents, .footer-copyright {
+  /* height: 60px; */
+  margin: -.5em auto;
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  .footer-contents {
+    float: none;
+    padding-bottom: 0;
+    margin: -1em;
+  }
+}
+.footer-copyright {
+  font-size: 12px;
+  color: #FFFFFF;
+  margin: -2.5em;
+  padding: 0;
+  /* position: relative; */
+  padding-top: .5em;
+}
+
+@media screen and (max-width: 640px) {
+  .footer-copyright {
+    float: none;
+    padding-top: 5px;
+  }
+}
+textarea#InputMessage.form-control {
+  height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.emailbox {
+  padding: 10px;
+}
+
+.namebox {
+  padding: 10px;
+}
+
+form#contact {
+  border: double;
+  border-color: #bf0a30;
+  padding: 20px;
+}
+
+input#InputName.form-control {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+input#InputEmail1.form-control {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+label#namelabel {
+  display: block;
+  font-family: Rubik;
+}
+
+label#emaillabel {
+  display: block;
+  font-family: Rubik;
+}
+
+label#messagelabel {
+  display: block;
+  font-family: Rubik;
+}
+
+.messagebox {
+  padding: 10px;
+}
+
+button#submitbutton {
+  border-radius: 20px;
+  background: #002868;
+  color: white;
+  font-size: 24px;
+}
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";

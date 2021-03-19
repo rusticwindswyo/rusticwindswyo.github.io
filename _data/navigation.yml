@@ -1,0 +1,10 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: "Contact"
+    url: /contact/
+  - title: "Insurance"
+    url: /insurance/
+  - title: "Services"
+    url: /services/
+
